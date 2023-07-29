@@ -1,0 +1,17 @@
+* {
+  font-family: $font-primary;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: $default;
+  font-size: $rootFontSize;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: 0;
+  outline: none;
+}

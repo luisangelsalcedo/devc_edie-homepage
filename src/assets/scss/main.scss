@@ -1,0 +1,21 @@
+@import './fonts.scss';
+@import './vars.scss';
+@import './default.scss';
+@import 'functions.scss';
+
+.container {
+  width: 100%;
+  max-width: 969px;
+  padding: 0 pxToRem(12);
+  position: relative;
+  margin: auto;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@import './footer.scss';
