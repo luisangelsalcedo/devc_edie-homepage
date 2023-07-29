@@ -1,0 +1,140 @@
+@import '../../assets/scss/vars.scss';
+@import '../../assets/scss/functions.scss';
+
+$menu-bg-color: rgba(
+  $color: $default,
+  $alpha: 0.95,
+);
+$menu-item-color: white;
+$menu-open-button-color: $default;
+$menu-close-button-color: $menu-item-color;
+
+.page {
+  &.visible {
+    overflow: hidden;
+    height: 100vh;
+
+    @media (min-width: 600px) {
+      overflow-y: auto;
+      height: auto;
+    }
+
+    .page-menu {
+      &-button {
+        svg {
+          path {
+            fill: $menu-close-button-color;
+          }
+        }
+        &-close {
+          position: relative;
+          transform: rotate(0);
+          opacity: 1;
+        }
+        &-open {
+          position: absolute;
+          inset: 0;
+          transform: translateX(15px);
+          opacity: 0;
+        }
+      }
+      &-list {
+        inset: 0 !important;
+        height: auto;
+        overflow: hidden;
+        z-index: 98;
+        opacity: 1;
+        background-color: $menu-bg-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 600px) {
+          background-color: transparent;
+        }
+
+        a {
+          color: $menu-item-color;
+
+          @media (min-width: 600px) {
+            color: $default;
+          }
+        }
+      }
+    }
+  }
+  &-menu {
+    &-button {
+      width: 38px;
+      position: relative;
+      z-index: 99;
+      background-color: transparent;
+
+      svg {
+        path {
+          fill: $menu-open-button-color;
+        }
+      }
+
+      @media (min-width: 600px) {
+        display: none;
+      }
+
+      &-close {
+        position: absolute;
+        inset: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      &-open {
+        position: relative;
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      position: fixed;
+      bottom: auto;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      opacity: 0;
+
+      @media (min-width: 600px) {
+        display: block !important;
+        position: relative;
+        height: auto;
+        overflow: auto;
+        opacity: 1;
+        border: solid 1px red;
+
+        & > ul {
+          display: flex;
+        }
+      }
+      & > ul {
+        text-align: center;
+      }
+
+      //   a {
+      //     display: block;
+      //     padding: pxToRem(16) 0;
+
+      //     &:hover,
+      //     &.active {
+      //       text-decoration: solid underline $default 2px;
+      //       text-underline-offset: 10px;
+      //     }
+      //     &.active {
+      //       opacity: 1;
+      //       font-weight: 700;
+      //     }
+      //   }
+    }
+  }
+}

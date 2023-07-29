@@ -1,10 +1,18 @@
 ---
-import { Brand, MainMenu } from '../components';
+import { Brand, CollapsedMenu, MainMenu } from '../components';
 ---
 
 <header>
   <div class='container'>
     <Brand />
-    <MainMenu />
+    <CollapsedMenu><MainMenu /></CollapsedMenu>
   </div>
 </header>
+
+<style>
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
