@@ -1,2 +1,38 @@
 @import '../../assets/scss/vars.scss';
 @import '../../assets/scss/functions.scss';
+
+.client {
+  padding: pxToRem(50) 0 pxToRem(100) 0;
+
+  &-item {
+    &-text {
+      font-size: pxToRem(24);
+      font-weight: 500;
+      margin-bottom: pxToRem(30);
+    }
+
+    &-author {
+      display: flex;
+
+      &-image {
+        width: 82px;
+        height: 82px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        margin-right: pxToRem(30);
+      }
+
+      &-name {
+        font-size: pxToRem(24);
+        font-weight: 500;
+
+        small {
+          font-size: pxToRem(18);
+          font-weight: 500;
+          color: $gray3;
+          margin-top: pxToRem(12);
+        }
+      }
+    }
+  }
+}
