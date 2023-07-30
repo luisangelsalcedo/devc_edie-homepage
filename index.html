@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="./devchallenges.png">
     <meta name="generator" content="Astro v2.1.3">
     <title>Edie homepage - luisangelsalcedo</title>
-  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.c073e404.css" /><script type="module">const i=document.querySelectorAll(".contact-us");i.forEach(e=>{e.addEventListener("submit",o=>{o.preventDefault();const s=new FormData(e),t=Object.fromEntries(s),n=e.querySelector(".err"),r=e.querySelector(".succ"),l=e.querySelector('input[name="email"]');if(console.log(t),n.innerHTML="",r.innerHTML="",t.email.length<3){n.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){n.innerHTML="❌ Enter a valid email address";return}console.log(),l.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const c=e=>document.querySelector(e),u=e=>document.querySelectorAll(e),m=c(".page-menu-button"),a=c(".page"),d=u(".page-menu a");m.addEventListener("click",()=>{a.classList.toggle("visible")});d.forEach(e=>{e.addEventListener("click",()=>{a.classList.remove("visible")})});
+  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.834e8e88.css" /><script type="module">const i=document.querySelectorAll(".contact-us");i.forEach(e=>{e.addEventListener("submit",o=>{o.preventDefault();const s=new FormData(e),t=Object.fromEntries(s),n=e.querySelector(".err"),r=e.querySelector(".succ"),l=e.querySelector('input[name="email"]');if(console.log(t),n.innerHTML="",r.innerHTML="",t.email.length<3){n.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){n.innerHTML="❌ Enter a valid email address";return}console.log(),l.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const c=e=>document.querySelector(e),u=e=>document.querySelectorAll(e),m=c(".page-menu-button"),a=c(".page"),d=u(".page-menu a");m.addEventListener("click",()=>{a.classList.toggle("visible")});d.forEach(e=>{e.addEventListener("click",()=>{a.classList.remove("visible")})});
 </script></head>
   <body>
     <div class="page">
@@ -227,8 +227,8 @@
       They have a young and talented team.”
     </h2>
     <div class="client-item-author">
-      <img src="./person4.png" alt="">
-      <h4>
+      <img class="client-item-author-image" src="./person4.png" alt="">
+      <h4 class="client-item-author-name">
         Carlos Tran
         <small>The Decorate Gatsby</small>
       </h4>
