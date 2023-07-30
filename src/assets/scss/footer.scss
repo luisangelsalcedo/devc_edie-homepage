@@ -1,14 +1,61 @@
 footer {
   color: $gray-footer;
   background-color: $black;
-  font-family: $font-footer;
-  font-size: pxToRem(14);
-  text-align: center;
-  padding: pxToRem(24) 0;
 
-  a {
-    color: inherit;
-    font-weight: bold;
-    font-size: inherit;
+  .container {
+    padding: 0 pxToRem(42);
+
+    &:first-child {
+      & > div {
+        padding: pxToRem(32) 0;
+      }
+      margin-bottom: pxToRem(125);
+    }
+
+    &:last-child {
+      font-family: $font-footer;
+      font-size: pxToRem(14);
+      text-align: center;
+      padding: pxToRem(24) 0;
+
+      a {
+        color: inherit;
+        font-weight: bold;
+        font-size: inherit;
+      }
+    }
+  }
+
+  .main-menu {
+    a {
+      color: white;
+    }
+  }
+  .brand {
+    font-size: pxToRem(36);
+    font-style: normal;
+    font-weight: 800;
+    color: $gray6;
+  }
+  .social-media {
+    display: flex;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: pxToRem(11);
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 24px;
+        }
+      }
+    }
   }
 }
