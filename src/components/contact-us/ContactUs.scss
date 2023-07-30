@@ -11,6 +11,7 @@
     background-color: transparent;
     border: 0;
     outline: none;
+    flex: 1;
   }
 
   .input-box {
@@ -23,6 +24,7 @@
     height: 47px;
 
     .form-control {
+      width: 100%;
       margin-left: pxToRem(15);
       &::placeholder {
         color: $gray4;
@@ -38,6 +40,8 @@
       font-weight: 500;
       color: white;
       flex-shrink: 0;
+      z-index: 99;
+      position: relative;
 
       &:hover {
         background-color: rgba($color: $blue, $alpha: 0.8);

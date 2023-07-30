@@ -1,0 +1,66 @@
+@import '../../../assets/scss/vars.scss';
+@import '../../../assets/scss/functions.scss';
+
+.service-list-item {
+  width: 341px;
+  height: 422px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: white;
+  padding: pxToRem(49) pxToRem(34) pxToRem(43) pxToRem(34);
+  margin-bottom: pxToRem(40);
+  transition: box-shadow 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 0px 10px 30px 0px rgba(51, 51, 51, 0.15);
+    button {
+      background-color: $blue;
+      color: white;
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &-icon {
+    background-color: $gray1;
+    width: 67px;
+    height: 67px;
+    border-radius: pxToRem(16);
+    margin-bottom: pxToRem(32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 36px;
+    }
+  }
+
+  &-title {
+    font-size: pxToRem(24);
+    font-weight: 700;
+    margin-bottom: pxToRem(24);
+  }
+
+  p {
+    font-size: pxToRem(16);
+    font-weight: 400;
+  }
+
+  button {
+    background-color: $gray5;
+    align-self: flex-start;
+    border-radius: pxToRem(12);
+    padding: pxToRem(9) pxToRem(12);
+    font-size: pxToRem(16);
+    font-weight: 500;
+    color: $gray3;
+
+    &:hover {
+      background-color: rgba($color: $blue, $alpha: 0.8);
+    }
+  }
+}

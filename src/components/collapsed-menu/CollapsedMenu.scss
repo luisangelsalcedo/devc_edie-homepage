@@ -62,12 +62,13 @@ $menu-close-button-color: $menu-item-color;
   }
   &-menu {
     &-button {
-      width: 38px;
+      width: 28px;
       position: relative;
       z-index: 99;
       background-color: transparent;
 
       svg {
+        width: 100%;
         path {
           fill: $menu-open-button-color;
         }

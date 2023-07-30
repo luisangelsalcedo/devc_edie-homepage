@@ -1,36 +1,28 @@
 ---
 import './SectionService.scss';
+import { IconEdit, IconCode, IconServer } from '../../assets/svgs';
+import ServiceItem from './service-item/ServiceItem.astro';
 ---
 
 <section class='service'>
-  <h2>We offer high demand services</h2>
-  <ul>
-    <li>
-      <div class='service-icon'></div>
-      <h3 class='service-title'>UI/UX Design</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac
-        nulla consequat aliquet id quis turpis.
-      </p>
-      <button>Get started</button>
-    </li>
-    <li>
-      <div class='service-icon'></div>
-      <h3 class='service-title'>Front End</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac
-        nulla consequat aliquet id quis turpis.
-      </p>
-      <button>Get started</button>
-    </li>
-    <li>
-      <div class='service-icon'></div>
-      <h3 class='service-title'>Back End</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac
-        nulla consequat aliquet id quis turpis.
-      </p>
-      <button>Get started</button>
-    </li>
-  </ul>
+  <h2 class='title'>We offer high<br />demand services</h2>
+  <div class='service-list'>
+    <ServiceItem title='UI/UX Design' href='#'>
+      <IconEdit slot='icon-service' />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac consequat
+      aliquet id quis turpis.
+    </ServiceItem>
+
+    <ServiceItem title='Front End' href='#'>
+      <IconCode slot='icon-service' />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac consequat
+      aliquet id quis turpis.
+    </ServiceItem>
+
+    <ServiceItem title='Back EndDesign' href='#'>
+      <IconServer slot='icon-service' />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac consequat
+      aliquet id quis turpis.
+    </ServiceItem>
+  </div>
 </section>

@@ -1,0 +1,21 @@
+---
+import './ServiceItem.scss';
+
+interface Props {
+  title: string;
+  href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<div class='service-list-item'>
+  <div>
+    <div class='service-list-item-icon'><slot name='icon-service' /></div>
+    <h3 class='service-list-item-title'>{title}</h3>
+    <p>
+      <slot />
+    </p>
+  </div>
+  <button>Get started</button>
+</div>

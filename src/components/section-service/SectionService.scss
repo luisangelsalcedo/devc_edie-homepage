@@ -1,2 +1,32 @@
 @import '../../assets/scss/vars.scss';
 @import '../../assets/scss/functions.scss';
+
+.service {
+  padding: pxToRem(50) 0;
+
+  .title {
+    margin-left: pxToRem(30);
+    margin-bottom: pxToRem(46);
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+
+    &-item {
+      &:nth-child(1) .service-list-item-icon {
+        background-color: $blue;
+      }
+      &:nth-child(2) .service-list-item-icon {
+        background-color: $green;
+      }
+      &:nth-child(3) .service-list-item-icon {
+        background-color: $red;
+      }
+    }
+  }
+}
