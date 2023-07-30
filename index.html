@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="./devchallenges.png">
     <meta name="generator" content="Astro v2.1.3">
     <title>Edie homepage - luisangelsalcedo</title>
-  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.75e82bc2.css" /><script type="module">const t=e=>document.querySelector(e),n=e=>document.querySelectorAll(e),s=t(".page-menu-button"),c=t(".page"),o=n(".page-menu a");s.addEventListener("click",()=>{c.classList.toggle("visible")});o.forEach(e=>{e.addEventListener("click",()=>{c.classList.remove("visible")})});
+  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.69e6272c.css" /><script type="module">const t=e=>document.querySelector(e),n=e=>document.querySelectorAll(e),s=t(".page-menu-button"),c=t(".page"),o=n(".page-menu a");s.addEventListener("click",()=>{c.classList.toggle("visible")});o.forEach(e=>{e.addEventListener("click",()=>{c.classList.remove("visible")})});
 </script></head>
   <body>
     <div class="page">
@@ -38,21 +38,25 @@
       <div class="container">
         
   <main>
-    <section class="aboutus">
-  <h1>
+    <section class="about-us">
+  <h1 class="about-us-title">
     <small>Unhappy with your website?</small>
-    We create beautiful and fast web services
+    We create beautiful<br>and fast web services
   </h1>
-  <img src="./heroImage.jpg" alt="" width="100%">
+  <picture>
+    <source media="(max-width: 799px)" srcset="./heroImagePhone.png">
+    <source media="(min-width: 800px)" srcset="./heroImage.jpg">
+    <img src="./heroImage.jpg" alt="Chris standing up holding his daughter Elva">
+  </picture>
   <article>
-    <h3>Story, emotion and purpose</h3>
+    <h3 class="about-us-title">Story, emotion<br>and purpose</h3>
     <p>
       We help transform your ideas into real world applications that will
       outperform your toughest competition and help you achieve your strategic
       goals in short period of time.
     </p>
-    <form>
-  <label class="input">
+    <form class="contact-us">
+  <label class="label">
     Want us to contact you?
     <div class="input-box">
       <input class="form-control" placeholder="Email">
@@ -179,8 +183,8 @@
 </ul>
     </div>
     <div>
-      <form>
-  <label class="input">
+      <form class="contact-us">
+  <label class="label">
     Want us to contact you?
     <div class="input-box">
       <input class="form-control" placeholder="Email">
