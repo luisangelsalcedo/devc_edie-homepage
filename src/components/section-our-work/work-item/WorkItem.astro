@@ -1,0 +1,22 @@
+---
+import './WorkItem.scss';
+
+interface Props {
+  src: string;
+  title: string;
+  subtitle: string;
+}
+
+const { src, title, subtitle } = Astro.props;
+---
+
+<div class='our-work-list-item'>
+  <div class='our-work-list-item-image'>
+    <img src={`./${src}`} alt={title} />
+  </div>
+
+  <h3 class='our-work-list-item-title'>
+    <small>{subtitle}</small>
+    {title}
+  </h3>
+</div>

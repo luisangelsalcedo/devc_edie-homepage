@@ -1,0 +1,33 @@
+@import '../../../assets/scss/vars.scss';
+@import '../../../assets/scss/functions.scss';
+
+.our-work-list-item {
+  flex-shrink: 0;
+  margin-bottom: pxToRem(36);
+
+  &-image {
+    width: 351px;
+    height: 351px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: pxToRem(24);
+    margin-bottom: pxToRem(13);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    font-size: pxToRem(18);
+    font-weight: 500;
+
+    small {
+      font-size: pxToRem(12);
+      font-weight: 300;
+      color: $gray3;
+    }
+  }
+}

@@ -40,8 +40,6 @@
       font-weight: 500;
       color: white;
       flex-shrink: 0;
-      z-index: 99;
-      position: relative;
 
       &:hover {
         background-color: rgba($color: $blue, $alpha: 0.8);
