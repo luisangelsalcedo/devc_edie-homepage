@@ -1,119 +1,20 @@
 ---
 import { Layout } from '../layouts';
-import { ContactUs } from '../components';
+import {
+  SectionAboutUs,
+  SectionService,
+  SectionOurWork,
+  SectionTeam,
+  SectionClient,
+} from '../components/sections';
 ---
 
 <Layout title='Edie homepage - luisangelsalcedo'>
   <main>
-    <section class='aboutus'>
-      <h1>
-        <small>Unhappy with your website?</small>
-        We create beautiful and fast web services
-      </h1>
-      <img src='./heroImage.jpg' alt='' width='100%' />
-      <article>
-        <h3>Story, emotion and purpose</h3>
-        <p>
-          We help transform your ideas into real world applications that will
-          outperform your toughest competition and help you achieve your
-          strategic goals in short period of time.
-        </p>
-        <ContactUs />
-      </article>
-      <section class='services'>
-        <h2>We offer high demand services</h2>
-        <ul>
-          <li>
-            <div class='service-icon'></div>
-            <h3 class='service-title'>UI/UX Design</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button>Get started</button>
-          </li>
-          <li>
-            <div class='service-icon'></div>
-            <h3 class='service-title'>Front End</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button>Get started</button>
-          </li>
-          <li>
-            <div class='service-icon'></div>
-            <h3 class='service-title'>Back End</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button>Get started</button>
-          </li>
-        </ul>
-      </section>
-      <section class='projects'>
-        <h2>Good design means good business</h2>
-        <ul>
-          <li>
-            <img src='./smarthome.jpg' alt='' />
-            <h3>
-              <small>Full stack application</small>
-              Smart home dashboard
-            </h3>
-          </li>
-          <li>
-            <img src='./onboard.png' alt='' />
-            <h3>
-              <small>UX/UI design</small>
-              Onboard application
-            </h3>
-          </li>
-          <li>
-            <img src='./booking.png' alt='' />
-            <h3>
-              <small>Mobile application</small>
-              Booking system
-            </h3>
-          </li>
-          <li>
-            <img src='./juice-product.png' alt='' />
-            <h3>
-              <small>Front End applicati on</small>
-              Juice product homepage
-            </h3>
-          </li>
-        </ul>
-      </section>
-      <section class='team'>
-        <div>
-          <h2>
-            <small>Meet the team</small>
-            We are chilled and a laidback team
-          </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div>
-          <img src='./person1.png' alt='' />
-          <img src='./person2.png' alt='' />
-          <img src='./person3.png' alt='' />
-        </div>
-      </section>
-      <section class='testimonials'>
-        <div class='testimonial-item'>
-          <h2 class='testimonial-item-text'>
-            “Fast and outstanding resutls. Edie understands their customer’s
-            needs. They have a young and talented team.”
-          </h2>
-          <div class='testimonial-item-author'>
-            <img src='./person4.png' alt='' />
-            <h4>
-              Carlos Tran
-              <small>The Decorate Gatsby</small>
-            </h4>
-          </div>
-        </div>
-      </section>
-    </section>
+    <SectionAboutUs />
+    <SectionService />
+    <SectionOurWork />
+    <SectionTeam />
+    <SectionClient />
   </main>
 </Layout>

@@ -1,7 +1,7 @@
 @import './fonts.scss';
 @import './vars.scss';
 @import './default.scss';
-@import 'functions.scss';
+@import './functions.scss';
 
 .container {
   width: 100%;
@@ -21,5 +21,19 @@
 header {
   padding-top: pxToRem(20);
 }
+section {
+  h2 {
+    font-size: pxToRem(24);
+    font-weight: 500;
 
+    small {
+      font-size: pxToRem(18);
+      font-weight: 500;
+    }
+  }
+  p {
+    color: $gray2;
+    font-weight: 400;
+  }
+}
 @import './footer.scss';
