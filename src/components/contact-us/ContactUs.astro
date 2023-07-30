@@ -6,8 +6,48 @@ import './ContactUs.scss';
   <label class='label'>
     Want us to contact you?
     <div class='input-box'>
-      <input class='form-control' placeholder='Email' />
+      <input class='form-control' name='email' placeholder='Email' />
       <button>Join</button>
     </div>
+    <span class='err'></span>
+    <span class='succ'></span>
   </label>
 </form>
+
+<script>
+  const forms = document.querySelectorAll('.contact-us');
+
+  forms.forEach((form: any) => {
+    form.addEventListener('submit', (e: any) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const values: any = Object.fromEntries(formData);
+      const err = form.querySelector('.err');
+      const succ = form.querySelector('.succ');
+      const input = form.querySelector('input[name="email"]');
+
+      console.log(values);
+      err.innerHTML = '';
+      succ.innerHTML = '';
+
+      if (values.email.length < 3) {
+        err.innerHTML = '❌ Enter more than 3 characters';
+        return;
+      }
+
+      if (
+        !values.email.match(
+          /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/
+        )
+      ) {
+        err.innerHTML = '❌ Enter a valid email address';
+        return;
+      }
+
+      console.log();
+      input.value = '';
+      succ.innerHTML = `✅ Thank you for registering: <b>${values.email}</b>`;
+    });
+  });
+</script>

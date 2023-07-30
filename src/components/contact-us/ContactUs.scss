@@ -11,7 +11,6 @@
     background-color: transparent;
     border: 0;
     outline: none;
-    height: 47px;
   }
 
   .input-box {
@@ -21,22 +20,34 @@
     justify-content: space-between;
     overflow: hidden;
     padding: pxToRem(4);
+    height: 47px;
 
     .form-control {
       margin-left: pxToRem(15);
       &::placeholder {
         color: $gray4;
+        font-weight: 500;
       }
     }
 
     button {
       background-color: $blue;
-      padding: pxToRem(13) pxToRem(20);
+      padding: 0 pxToRem(20);
       border-radius: pxToRem(12);
       font-size: pxToRem(14);
       font-weight: 500;
       color: white;
       flex-shrink: 0;
+
+      &:hover {
+        background-color: rgba($color: $blue, $alpha: 0.8);
+      }
     }
+  }
+  .err {
+    color: $red;
+  }
+  .succ {
+    color: $green;
   }
 }
