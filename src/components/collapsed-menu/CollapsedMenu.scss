@@ -1,10 +1,7 @@
 @import '../../assets/scss/vars.scss';
 @import '../../assets/scss/functions.scss';
 
-$menu-bg-color: rgba(
-  $color: $default,
-  $alpha: 0.95,
-);
+$menu-bg-color: $default;
 $menu-item-color: white;
 $menu-open-button-color: $default;
 $menu-close-button-color: $menu-item-color;

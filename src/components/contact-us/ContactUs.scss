@@ -1,0 +1,42 @@
+@import '../../assets/scss/vars.scss';
+@import '../../assets/scss/functions.scss';
+
+.contact-us {
+  .label {
+    font-size: pxToRem(10);
+    color: $gray3;
+  }
+
+  input {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    height: 47px;
+  }
+
+  .input-box {
+    background-color: $gray6;
+    border-radius: pxToRem(12);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: pxToRem(4);
+
+    .form-control {
+      margin-left: pxToRem(15);
+      &::placeholder {
+        color: $gray4;
+      }
+    }
+
+    button {
+      background-color: $blue;
+      padding: pxToRem(13) pxToRem(20);
+      border-radius: pxToRem(12);
+      font-size: pxToRem(14);
+      font-weight: 500;
+      color: white;
+      flex-shrink: 0;
+    }
+  }
+}

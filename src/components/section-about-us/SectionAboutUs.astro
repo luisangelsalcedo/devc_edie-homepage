@@ -3,14 +3,21 @@ import ContactUs from '../contact-us/ContactUs.astro';
 import './SectionAboutUs.scss';
 ---
 
-<section class='aboutus'>
-  <h1>
+<section class='about-us'>
+  <h1 class='about-us-title'>
     <small>Unhappy with your website?</small>
-    We create beautiful and fast web services
+    We create beautiful<br />and fast web services
   </h1>
-  <img src='./heroImage.jpg' alt='' width='100%' />
+  <picture>
+    <source media='(max-width: 799px)' srcset='./heroImagePhone.png' />
+    <source media='(min-width: 800px)' srcset='./heroImage.jpg' />
+    <img
+      src='./heroImage.jpg'
+      alt='Chris standing up holding his daughter Elva'
+    />
+  </picture>
   <article>
-    <h3>Story, emotion and purpose</h3>
+    <h3 class='about-us-title'>Story, emotion<br />and purpose</h3>
     <p>
       We help transform your ideas into real world applications that will
       outperform your toughest competition and help you achieve your strategic

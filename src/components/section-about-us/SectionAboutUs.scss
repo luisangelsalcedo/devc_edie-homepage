@@ -1,2 +1,35 @@
 @import '../../assets/scss/vars.scss';
 @import '../../assets/scss/functions.scss';
+
+.about-us {
+  padding-bottom: pxToRem(50);
+
+  &-title {
+    font-size: pxToRem(24);
+    font-weight: 500;
+    margin: pxToRem(15) 0;
+
+    small {
+      color: $blue;
+      font-size: pxToRem(12);
+    }
+  }
+  img {
+    border-radius: pxToRem(18);
+    width: 100%;
+  }
+  p {
+    font-size: pxToRem(12);
+    font-weight: 400;
+    margin-bottom: pxToRem(31);
+  }
+
+  article {
+    width: 275px;
+  }
+
+  article,
+  h1 {
+    margin-left: pxToRem(30);
+  }
+}
