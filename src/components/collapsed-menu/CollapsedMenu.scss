@@ -8,8 +8,8 @@ $menu-close-button-color: $menu-item-color;
 
 .page {
   &.visible {
-    overflow: hidden;
-    height: 100vh;
+    // overflow: hidden;
+    // height: 100vh;
 
     @media (min-width: 600px) {
       overflow-y: auto;

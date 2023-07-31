@@ -3,9 +3,35 @@ import './MainMenu.scss';
 ---
 
 <ul class='main-menu'>
-  <li><a href='#'>Home</a></li>
-  <li><a href='#'>Services</a></li>
-  <li><a href='#'>Our Works</a></li>
-  <li><a href='#'>Clients</a></li>
-  <li><a href='#'>Contact</a></li>
+  <li><a href='javascript:void(0)' data-section='.about-us'>Home</a></li>
+  <li><a href='javascript:void(0)' data-section='.service'>Services</a></li>
+  <li><a href='javascript:void(0)' data-section='.our-work'>Our Works</a></li>
+  <li><a href='javascript:void(0)' data-section='.client'>Clients</a></li>
+  <li><a href='javascript:void(0)' data-section='footer'>Contact</a></li>
 </ul>
+
+<script>
+  const anchors = document.querySelectorAll('.main-menu a[data-section]');
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', (e: any) => {
+      const sc: any = e.target.getAttribute('data-section');
+      const section = document.querySelector(sc);
+      const topVal = section.offsetTop;
+      const valY = topVal;
+      window.scrollTo(0, valY);
+
+      if (sc === 'footer') {
+        const form = section.querySelector('.contact-us');
+        const input = form.querySelector('input');
+        input.focus();
+
+        form.classList.add('animation');
+        const timer = setTimeout(() => {
+          form.classList.remove('animation');
+          clearTimeout(timer);
+        }, 1000);
+      }
+    });
+  });
+</script>

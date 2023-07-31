@@ -2,7 +2,11 @@
 @import '../../assets/scss/functions.scss';
 
 .about-us {
-  padding-bottom: pxToRem(50);
+  padding: pxToRem(50) 0;
+
+  @media (min-width: 1200px) {
+    padding-top: pxToRem(100);
+  }
 
   &-title {
     font-size: pxToRem(24);

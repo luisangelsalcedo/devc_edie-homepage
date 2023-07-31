@@ -1,7 +1,27 @@
 @import '../../assets/scss/vars.scss';
 @import '../../assets/scss/functions.scss';
 
+@keyframes animationIn {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .contact-us {
+  &.animation {
+    animation: animationIn 0.4s infinite ease;
+    animation-fill-mode: forwards;
+  }
+
   .label {
     font-size: pxToRem(10);
 

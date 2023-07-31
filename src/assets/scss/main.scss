@@ -20,15 +20,32 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 100px;
+
+  @media (min-width: 1200px) {
+    padding-top: 120px;
+  }
 }
 
 header {
   padding-top: pxToRem(20);
   margin-bottom: pxToRem(33);
 
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  top: 0;
+  background-color: white;
+
+  @media (min-width: 799px) {
+    height: 90px;
+  }
+
   @media (min-width: 1200px) {
     padding-top: pxToRem(42);
     margin-bottom: pxToRem(66);
+    height: 130px;
   }
 }
 section {
