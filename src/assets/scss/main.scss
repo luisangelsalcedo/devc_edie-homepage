@@ -10,7 +10,7 @@
   position: relative;
   margin: auto;
 
-  @media (min-width: 799px) {
+  @media (min-width: 791px) {
     padding: 0 pxToRem(24);
   }
 }
@@ -38,7 +38,7 @@ header {
   top: 0;
   background-color: white;
 
-  @media (min-width: 799px) {
+  @media (min-width: 791px) {
     height: 90px;
   }
 

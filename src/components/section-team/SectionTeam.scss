@@ -6,7 +6,7 @@ $gap: 10;
 .team {
   padding: pxToRem(50) 0;
 
-  @media (min-width: 799px) {
+  @media (min-width: 791px) {
     display: flex;
     align-items: center;
     justify-content: space-between;

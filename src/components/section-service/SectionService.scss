@@ -26,7 +26,7 @@
     margin: auto;
     row-gap: pxToRem(40);
 
-    @media (min-width: 799px) {
+    @media (min-width: 791px) {
       flex-direction: row;
       flex-wrap: wrap;
       column-gap: pxToRem(40);
