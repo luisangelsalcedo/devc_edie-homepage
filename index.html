@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="./devchallenges.png">
     <meta name="generator" content="Astro v2.1.3">
     <title>Edie homepage - luisangelsalcedo</title>
-  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.59c6d503.css" /><script type="module">const u=document.querySelectorAll(".contact-us");u.forEach(e=>{e.addEventListener("submit",s=>{s.preventDefault();const o=new FormData(e),t=Object.fromEntries(o),c=e.querySelector(".err"),r=e.querySelector(".succ"),n=e.querySelector('input[name="email"]');if(console.log(t),c.innerHTML="",r.innerHTML="",t.email.length<3){c.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){c.innerHTML="❌ Enter a valid email address";return}console.log(),n.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const m=document.querySelectorAll(".main-menu a[data-section]");m.forEach(e=>{e.addEventListener("click",s=>{const o=s.target.getAttribute("data-section"),t=document.querySelector(o),r=t.offsetTop;if(window.scrollTo(0,r),o==="footer"){const n=t.querySelector(".contact-us");n.querySelector("input").focus(),n.classList.add("animation");const l=setTimeout(()=>{n.classList.remove("animation"),clearTimeout(l)},1500)}})});const a=e=>document.querySelector(e),d=e=>document.querySelectorAll(e),g=a(".page-menu-button"),i=a(".page"),p=d(".page-menu a");g.addEventListener("click",()=>{i.classList.toggle("visible")});p.forEach(e=>{e.addEventListener("click",()=>{i.classList.remove("visible")})});
+  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.59c6d503.css" /><script type="module">const u=document.querySelectorAll(".contact-us");u.forEach(e=>{e.addEventListener("submit",s=>{s.preventDefault();const o=new FormData(e),t=Object.fromEntries(o),c=e.querySelector(".err"),r=e.querySelector(".succ"),n=e.querySelector('input[name="email"]');if(console.log(t),c.innerHTML="",r.innerHTML="",t.email.length<3){c.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){c.innerHTML="❌ Enter a valid email address";return}console.log(),n.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const m=document.querySelectorAll(".main-menu a[data-section]");m.forEach(e=>{e.addEventListener("click",s=>{const o=s.target.getAttribute("data-section"),t=document.querySelector(o),r=t.offsetTop;if(window.scrollTo(0,r),o==="footer"){const n=t.querySelector(".contact-us");n.querySelector("input").focus(),n.classList.add("animation");const l=setTimeout(()=>{n.classList.remove("animation"),clearTimeout(l)},1e3)}})});const a=e=>document.querySelector(e),d=e=>document.querySelectorAll(e),g=a(".page-menu-button"),i=a(".page"),p=d(".page-menu a");g.addEventListener("click",()=>{i.classList.toggle("visible")});p.forEach(e=>{e.addEventListener("click",()=>{i.classList.remove("visible")})});
 </script></head>
   <body>
     <div class="page">
@@ -252,9 +252,15 @@
     <div>
       <div class="brand">Edie</div>
       <ul class="social-media">
-  <li><a href="#"> <img src="./instagram.svg" alt=""></a></li>
-  <li><a href="#"> <img src="./linkedin.svg" alt=""></a></li>
-  <li><a href="#"> <img src="./twitter.svg" alt=""></a></li>
+  <li>
+    <a href="https://devchallenges.io/portfolio/luisangelsalcedo" target="_blank">
+      <img src="./instagram.svg" alt=""></a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/luisangelsalcedo/" target="_blank">
+      <img src="./linkedin.svg" alt=""></a>
+  </li>
+  <li><a href="javaScript:void(0)"> <img src="./twitter.svg" alt=""></a></li>
 </ul>
     </div>
     <div>
