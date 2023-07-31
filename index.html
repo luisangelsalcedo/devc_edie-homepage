@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="./devchallenges.png">
     <meta name="generator" content="Astro v2.1.3">
     <title>Edie homepage - luisangelsalcedo</title>
-  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.03ef85e6.css" /><script type="module">const i=document.querySelectorAll(".contact-us");i.forEach(e=>{e.addEventListener("submit",o=>{o.preventDefault();const s=new FormData(e),t=Object.fromEntries(s),n=e.querySelector(".err"),r=e.querySelector(".succ"),l=e.querySelector('input[name="email"]');if(console.log(t),n.innerHTML="",r.innerHTML="",t.email.length<3){n.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){n.innerHTML="❌ Enter a valid email address";return}console.log(),l.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const c=e=>document.querySelector(e),u=e=>document.querySelectorAll(e),m=c(".page-menu-button"),a=c(".page"),d=u(".page-menu a");m.addEventListener("click",()=>{a.classList.toggle("visible")});d.forEach(e=>{e.addEventListener("click",()=>{a.classList.remove("visible")})});
+  <link rel="stylesheet" href="/devc_edie-homepage/assets/index.59c6d503.css" /><script type="module">const u=document.querySelectorAll(".contact-us");u.forEach(e=>{e.addEventListener("submit",s=>{s.preventDefault();const o=new FormData(e),t=Object.fromEntries(o),c=e.querySelector(".err"),r=e.querySelector(".succ"),n=e.querySelector('input[name="email"]');if(console.log(t),c.innerHTML="",r.innerHTML="",t.email.length<3){c.innerHTML="❌ Enter more than 3 characters";return}if(!t.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/)){c.innerHTML="❌ Enter a valid email address";return}console.log(),n.value="",r.innerHTML=`✅ Thank you for registering: <b>${t.email}</b>`})});const m=document.querySelectorAll(".main-menu a[data-section]");m.forEach(e=>{e.addEventListener("click",s=>{const o=s.target.getAttribute("data-section"),t=document.querySelector(o),r=t.offsetTop;if(window.scrollTo(0,r),o==="footer"){const n=t.querySelector(".contact-us");n.querySelector("input").focus(),n.classList.add("animation");const l=setTimeout(()=>{n.classList.remove("animation"),clearTimeout(l)},1500)}})});const a=e=>document.querySelector(e),d=e=>document.querySelectorAll(e),g=a(".page-menu-button"),i=a(".page"),p=d(".page-menu a");g.addEventListener("click",()=>{i.classList.toggle("visible")});p.forEach(e=>{e.addEventListener("click",()=>{i.classList.remove("visible")})});
 </script></head>
   <body>
     <div class="page">
@@ -25,11 +25,11 @@
 
   <div class="page-menu-list">
     <ul class="main-menu">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Services</a></li>
-  <li><a href="#">Our Works</a></li>
-  <li><a href="#">Clients</a></li>
-  <li><a href="#">Contact</a></li>
+  <li><a href="javascript:void(0)" data-section=".about-us">Home</a></li>
+  <li><a href="javascript:void(0)" data-section=".service">Services</a></li>
+  <li><a href="javascript:void(0)" data-section=".our-work">Our Works</a></li>
+  <li><a href="javascript:void(0)" data-section=".client">Clients</a></li>
+  <li><a href="javascript:void(0)" data-section="footer">Contact</a></li>
 </ul>
   </div>
 </div>
@@ -68,7 +68,7 @@
 </form>
   </article>
 </section>
-    <section class="service">
+    <section class="service" id="service">
   <h2 class="title">We offer high<br>demand services</h2>
   <div class="service-list">
     <div class="service-list-item">
@@ -144,7 +144,7 @@
 </div>
   </div>
 </section>
-    <section class="our-work">
+    <section class="our-work" id="our-work">
   <h2 class="title">Good design means<br>good business</h2>
   <div class="our-work-list">
     <div class="our-work-list-item">
@@ -220,7 +220,7 @@
     </div>
   </div>
 </section>
-    <section class="client">
+    <section class="client" id="client">
   <div class="client-item">
     <h2 class="client-item-text">
       “Fast and outstanding resutls. Edie understands their customer’s needs.
@@ -238,15 +238,15 @@
   </main>
 
       </div>
-      <footer>
+      <footer id="footer">
   <div class="container">
     <div>
       <ul class="main-menu">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Services</a></li>
-  <li><a href="#">Our Works</a></li>
-  <li><a href="#">Clients</a></li>
-  <li><a href="#">Contact</a></li>
+  <li><a href="javascript:void(0)" data-section=".about-us">Home</a></li>
+  <li><a href="javascript:void(0)" data-section=".service">Services</a></li>
+  <li><a href="javascript:void(0)" data-section=".our-work">Our Works</a></li>
+  <li><a href="javascript:void(0)" data-section=".client">Clients</a></li>
+  <li><a href="javascript:void(0)" data-section="footer">Contact</a></li>
 </ul>
     </div>
     <div>
