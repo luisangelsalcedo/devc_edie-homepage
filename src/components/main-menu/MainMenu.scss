@@ -5,4 +5,19 @@
   font-size: pxToRem(18);
   font-weight: 400;
   line-height: 200%;
+
+  a {
+    display: block;
+    padding: pxToRem(4.3) pxToRem(10);
+
+    @media (min-width: 1200px) {
+      font-size: pxToRem(24);
+      padding: pxToRem(4.3) pxToRem(18);
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
+  }
 }

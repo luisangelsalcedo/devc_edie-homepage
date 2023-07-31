@@ -4,9 +4,17 @@
 .service {
   padding: pxToRem(50) 0;
 
+  @media (min-width: 1200px) {
+    padding: pxToRem(100) pxToRem(50);
+  }
+
   .title {
     margin-left: pxToRem(30);
     margin-bottom: pxToRem(46);
+
+    @media (min-width: 1200px) {
+      margin-left: pxToRem(40);
+    }
   }
 
   &-list {
@@ -16,6 +24,13 @@
     justify-content: center;
     position: relative;
     margin: auto;
+    row-gap: pxToRem(40);
+
+    @media (min-width: 799px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: pxToRem(40);
+    }
 
     &-item {
       &:nth-child(1) .service-list-item-icon {

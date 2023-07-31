@@ -4,11 +4,24 @@
 .client {
   padding: pxToRem(50) 0 pxToRem(100) 0;
 
+  @media (min-width: 1200px) {
+    padding: pxToRem(100) pxToRem(90) pxToRem(200) pxToRem(90);
+  }
+
   &-item {
     &-text {
       font-size: pxToRem(24);
       font-weight: 500;
       margin-bottom: pxToRem(30);
+
+      @media (min-width: 799px) {
+        width: 600px;
+      }
+
+      @media (min-width: 1200px) {
+        width: 937px;
+        font-size: pxToRem(36);
+      }
     }
 
     &-author {

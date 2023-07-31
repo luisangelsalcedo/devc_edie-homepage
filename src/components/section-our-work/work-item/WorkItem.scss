@@ -15,6 +15,11 @@
     border-radius: pxToRem(24);
     margin-bottom: pxToRem(13);
 
+    @media (min-width: 1200px) {
+      width: 543px;
+      height: 544px;
+    }
+
     img {
       width: 100%;
     }
@@ -24,10 +29,18 @@
     font-size: pxToRem(18);
     font-weight: 500;
 
+    @media (min-width: 1200px) {
+      font-size: pxToRem(24);
+    }
+
     small {
       font-size: pxToRem(12);
       font-weight: 300;
       color: $gray3;
+
+      @media (min-width: 1200px) {
+        font-size: pxToRem(14);
+      }
     }
   }
 }

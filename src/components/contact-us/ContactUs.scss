@@ -4,6 +4,10 @@
 .contact-us {
   .label {
     font-size: pxToRem(10);
+
+    @media (min-width: 1200px) {
+      font-size: pxToRem(14);
+    }
     color: $gray3;
   }
 
@@ -23,12 +27,22 @@
     padding: pxToRem(4);
     height: 47px;
 
+    @media (min-width: 1200px) {
+      height: 57px;
+      margin-top: pxToRem(9);
+    }
+
     .form-control {
       width: 100%;
       margin-left: pxToRem(15);
+
       &::placeholder {
         color: $gray4;
         font-weight: 500;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: pxToRem(18);
       }
     }
 
@@ -41,8 +55,13 @@
       color: white;
       flex-shrink: 0;
 
+      @media (min-width: 1200px) {
+        font-size: pxToRem(18);
+      }
+
       &:hover {
         background-color: rgba($color: $blue, $alpha: 0.8);
+        cursor: pointer;
       }
     }
   }

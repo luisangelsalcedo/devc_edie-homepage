@@ -8,8 +8,19 @@ footer {
     &:first-child {
       & > div {
         padding: pxToRem(32) 0;
+        flex: 1;
+
+        @media (min-width: 1200px) {
+          padding-top: pxToRem(46);
+        }
       }
       margin-bottom: pxToRem(125);
+
+      @media (min-width: 799px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: pxToRem(100);
+      }
     }
 
     &:last-child {
@@ -23,6 +34,10 @@ footer {
         font-weight: bold;
         font-size: inherit;
       }
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0 pxToRem(92);
     }
   }
 
@@ -56,6 +71,11 @@ footer {
           width: 24px;
         }
       }
+    }
+  }
+  .contact-us {
+    label {
+      color: white !important;
     }
   }
 }

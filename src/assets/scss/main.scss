@@ -5,10 +5,14 @@
 
 .container {
   width: 100%;
-  max-width: 969px;
+  max-width: 1332px;
   padding: 0 pxToRem(12);
   position: relative;
   margin: auto;
+
+  @media (min-width: 799px) {
+    padding: 0 pxToRem(24);
+  }
 }
 
 .page {
@@ -21,11 +25,20 @@
 header {
   padding-top: pxToRem(20);
   margin-bottom: pxToRem(33);
+
+  @media (min-width: 1200px) {
+    padding-top: pxToRem(42);
+    margin-bottom: pxToRem(66);
+  }
 }
 section {
   h2 {
     font-size: pxToRem(24);
     font-weight: 500;
+
+    @media (min-width: 1200px) {
+      font-size: pxToRem(36);
+    }
 
     small {
       font-size: pxToRem(18);

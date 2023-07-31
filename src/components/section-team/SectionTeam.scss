@@ -6,6 +6,16 @@ $gap: 10;
 .team {
   padding: pxToRem(50) 0;
 
+  @media (min-width: 799px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1200px) {
+    padding: pxToRem(100) pxToRem(90);
+  }
+
   &-description {
     width: 280px;
     margin-bottom: pxToRem(36);
@@ -40,12 +50,21 @@ $gap: 10;
 
     &1 {
       width: 178px;
+      @media (min-width: 1200px) {
+        width: 320px;
+      }
     }
     &2 {
       width: 145px;
+      @media (min-width: 1200px) {
+        width: 260px;
+      }
     }
     &3 {
       width: 162px;
+      @media (min-width: 1200px) {
+        width: 292px;
+      }
     }
     img {
       border-radius: pxToRem(24);

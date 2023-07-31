@@ -109,7 +109,6 @@ $menu-close-button-color: $menu-item-color;
         height: auto;
         overflow: auto;
         opacity: 1;
-        border: solid 1px red;
 
         & > ul {
           display: flex;
@@ -117,6 +116,10 @@ $menu-close-button-color: $menu-item-color;
       }
       & > ul {
         text-align: center;
+      }
+
+      a {
+        color: $default;
       }
 
       //   a {

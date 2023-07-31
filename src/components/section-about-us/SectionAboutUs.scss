@@ -9,9 +9,18 @@
     font-weight: 500;
     margin: pxToRem(15) 0;
 
+    @media (min-width: 1200px) {
+      font-size: pxToRem(48);
+      margin: pxToRem(42) 0;
+    }
+
     small {
       color: $blue;
       font-size: pxToRem(12);
+
+      @media (min-width: 1200px) {
+        font-size: pxToRem(18);
+      }
     }
   }
   img {
@@ -22,14 +31,30 @@
     font-size: pxToRem(12);
     font-weight: 400;
     margin-bottom: pxToRem(31);
+
+    @media (min-width: 1200px) {
+      font-size: pxToRem(18);
+      margin-bottom: pxToRem(42);
+    }
   }
 
   article {
     width: 275px;
+    @media (min-width: 1200px) {
+      width: 366px;
+    }
   }
 
   article,
   h1 {
     margin-left: pxToRem(30);
+
+    @media (min-width: 799px) {
+      margin-left: pxToRem(180);
+    }
+
+    @media (min-width: 1200px) {
+      margin-left: pxToRem(253);
+    }
   }
 }

@@ -4,9 +4,17 @@
 .our-work {
   padding: pxToRem(50) 0;
 
+  @media (min-width: 1200px) {
+    padding: pxToRem(100) pxToRem(50);
+  }
+
   .title {
     margin-left: pxToRem(30);
     margin-bottom: pxToRem(46);
+
+    @media (min-width: 1200px) {
+      margin-left: pxToRem(40);
+    }
   }
 
   &-list {
@@ -16,6 +24,28 @@
     align-items: center;
     position: relative;
     margin: auto;
+    row-gap: pxToRem(36);
+
+    @media (min-width: 799px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      column-gap: pxToRem(12);
+      row-gap: 0;
+
+      &-item {
+        &:nth-child(2n-1) {
+          margin-top: pxToRem(100);
+        }
+        &:nth-child(2n) {
+          margin-top: pxToRem(-100);
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      column-gap: pxToRem(20);
+    }
   }
 
   .more {
@@ -26,6 +56,17 @@
     font-weight: 500;
     color: $blue;
 
+    @media (min-width: 799px) {
+      grid-column: 2;
+      position: relative;
+      bottom: 4rem;
+      justify-content: flex-end;
+    }
+    @media (min-width: 1200px) {
+      bottom: 5rem;
+      font-size: pxToRem(24);
+    }
+
     &:hover {
       text-decoration: underline;
       text-underline-offset: 5px;
@@ -35,6 +76,10 @@
       width: 24px;
       margin-left: pxToRem(8);
       flex-shrink: 0;
+
+      @media (min-width: 1200px) {
+        margin-left: pxToRem(13);
+      }
     }
   }
 }
