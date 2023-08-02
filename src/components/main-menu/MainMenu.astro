@@ -3,35 +3,58 @@ import './MainMenu.scss';
 ---
 
 <ul class='main-menu'>
-  <li><a href='javascript:void(0)' data-section='.about-us'>Home</a></li>
-  <li><a href='javascript:void(0)' data-section='.service'>Services</a></li>
-  <li><a href='javascript:void(0)' data-section='.our-work'>Our Works</a></li>
-  <li><a href='javascript:void(0)' data-section='.client'>Clients</a></li>
-  <li><a href='javascript:void(0)' data-section='footer'>Contact</a></li>
+  <li><a href='javascript:void(0)' data-section='#about-us'>Home</a></li>
+  <li><a href='javascript:void(0)' data-section='#service'>Services</a></li>
+  <li><a href='javascript:void(0)' data-section='#our-work'>Our Works</a></li>
+  <li><a href='javascript:void(0)' data-section='#client'>Clients</a></li>
+  <li><a href='javascript:void(0)' data-section='#footer'>Contact</a></li>
 </ul>
 
 <script>
   const anchors = document.querySelectorAll('.main-menu a[data-section]');
+  const sections = document.querySelectorAll('.section');
 
   anchors.forEach(anchor => {
     anchor.addEventListener('click', (e: any) => {
-      const sc: any = e.target.getAttribute('data-section');
-      const section = document.querySelector(sc);
+      const id: any = anchor.getAttribute('data-section');
+      const section = document.querySelector(id);
       const topVal = section.offsetTop;
       const valY = topVal;
       window.scrollTo(0, valY);
 
-      if (sc === 'footer') {
-        const form = section.querySelector('.contact-us');
-        const input = form.querySelector('input');
-        input.focus();
-
-        form.classList.add('animation');
-        const timer = setTimeout(() => {
-          form.classList.remove('animation');
-          clearTimeout(timer);
-        }, 1000);
+      if (id === '#footer') {
+        focusContactUs();
       }
     });
   });
+
+  function focusContactUs() {
+    const form: any = document.querySelector('footer .contact-us');
+    const input = form.querySelector('input');
+    input.focus();
+
+    form.classList.add('animation');
+    const timer = setTimeout(() => {
+      form.classList.remove('animation');
+      clearTimeout(timer);
+    }, 1000);
+  }
+
+  // Add .active class by scroll
+  function addActiveClassByScroll() {
+    sections.forEach((sec: any) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+
+      let validation = top >= offset && top < offset + height;
+
+      document
+        .querySelector(`header .main-menu a[data-section='#${id}']`)
+        ?.classList.toggle('active', validation);
+    });
+  }
+  addActiveClassByScroll();
+  window.addEventListener('scroll', addActiveClassByScroll);
 </script>
